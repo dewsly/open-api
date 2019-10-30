@@ -2,12 +2,16 @@ openapi: 3.0.0
 info:
   title: Announcements v3
   version: '3.0'
+  description: ''
+  contact:
+    name: Tom Zagorski
+    url: signalkit.com
 servers:
   - url: 'https://app.signalkit.com/api/announcements/v3'
 paths:
   '/announcements/{id}/':
     get:
-      summary: Gets the announcements visible to the user
+      summary: Get the announcements visible to the user
       tags: []
       responses: {}
       description: ''
@@ -17,19 +21,17 @@ paths:
         name: id
         in: path
     post:
-      summary: ''
+      summary: Create one/many announcements
       responses:
         '200':
           description: OK
     put:
-      summary: ''
+      summary: Update an announcement
       responses:
         '200':
           description: OK
     delete:
-      summary: ''
+      summary: Delete an announcement
       responses:
         '200':
           description: OK
-components:
-  schemas: {}
