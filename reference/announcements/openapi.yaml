@@ -1,0 +1,9 @@
+openapi: 3.0.0
+info:
+  title: Announcements v2
+  version: '2.0'
+servers:
+  - url: 'https://app.signalkit.com/api/announcements/v2'
+paths: {}
+components:
+  schemas: {}
