@@ -88,8 +88,18 @@ paths:
                         type: string
                       target_group_type:
                         type: string
+                        enum:
+                          - school
+                          - class
+                          - group
+                        example: school
                       referring_to_user_type:
                         type: string
+                        enum:
+                          - staff
+                          - student
+                          - contact
+                        example: student
                       from_group_type:
                         type: string
                       user_type:
@@ -99,6 +109,4 @@ paths:
                       - referring_to_user_id
                       - target_group_type
                       - referring_to_user_type
-                      - from_group_type
-                      - user_type
       parameters: []
