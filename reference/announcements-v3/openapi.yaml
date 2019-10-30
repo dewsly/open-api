@@ -4,6 +4,32 @@ info:
   version: '3.0'
 servers:
   - url: 'https://app.signalkit.com/api/announcements/v3'
-paths: {}
+paths:
+  '/announcements/{id}/':
+    get:
+      summary: Gets the announcements visible to the user
+      tags: []
+      responses: {}
+      description: ''
+    parameters:
+      - schema:
+          type: number
+        name: id
+        in: path
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+    patch:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: ''
+      responses:
+        '200':
+          description: OK
 components:
   schemas: {}

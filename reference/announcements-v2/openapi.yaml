@@ -4,6 +4,32 @@ info:
   version: '2.0'
 servers:
   - url: 'https://app.signalkit.com/api/announcements/v2'
-paths: {}
+paths:
+  /announcements/:
+    post:
+      summary: Creates an announcement
+      tags: []
+      responses: {}
+    get:
+      summary: Gets the announcements for the user in context
+      tags: []
+      responses: {}
+    patch:
+      summary: Updates a single part of the announcement
+      tags: []
+      responses: {}
+    put:
+      summary: Updates the entire announcement
+      tags: []
+      responses: {}
+    delete:
+      summary: Deletes an announcement
+      tags: []
+      responses: {}
+  /bulk-import/:
+    post:
+      summary: Creates a batch of announcements
+      tags: []
+      responses: {}
 components:
   schemas: {}
