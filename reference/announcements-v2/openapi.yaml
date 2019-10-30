@@ -5,6 +5,7 @@ info:
   contact:
     name: Tom Zagorski
     url: signalkit.com
+  description: ''
 servers:
   - url: 'https://app.signalkit.com/api/announcements/v2'
 paths:
