@@ -112,6 +112,14 @@ paths:
                       - referring_to_user_id
                       - target_group_type
                       - referring_to_user_type
+                reply_to_email:
+                  type: string
+                job_complete_email:
+                  type: string
+                job_name:
+                  type: string
+                '':
+                  type: string
               required:
                 - announcement_type
                 - source
