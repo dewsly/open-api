@@ -31,5 +31,73 @@ paths:
       summary: Creates a batch of announcements
       tags: []
       responses: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                announcement_type:
+                  type: string
+                include_author_name:
+                  type: string
+                source:
+                  type: string
+                recordings:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      audio_url:
+                        type: string
+                      language:
+                        type: string
+                        description: 'Language Name. For example, "English" or "Spanish".'
+                    required:
+                      - audio_url
+                      - language
+                content_template:
+                  type: string
+                email_content_template:
+                  type: string
+                email_subject:
+                  type: string
+                sms_content_template:
+                  type: string
+                phone_content_template:
+                  type: string
+                merge_variables:
+                  type:
+                    - string
+                    - array
+                  items:
+                    type: object
+                    properties:
+                      from_group:
+                        type: string
+                      target_group:
+                        type: string
+                      user_ids:
+                        type: string
+                      referring_to_user_id:
+                        type: string
+                      send_at:
+                        type: string
+                      target_group_type:
+                        type: string
+                      referring_to_user_type:
+                        type: string
+                      from_group_type:
+                        type: string
+                      user_type:
+                        type: string
+                    required:
+                      - target_group
+                      - referring_to_user_id
+                      - target_group_type
+                      - referring_to_user_type
+                      - from_group_type
+                      - user_type
+      parameters: []
 components:
   schemas: {}
