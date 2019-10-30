@@ -15,6 +15,8 @@ paths:
       tags: []
       responses: {}
       description: ''
+      security:
+        - OAuth2: []
     parameters:
       - schema:
           type: number
@@ -35,3 +37,7 @@ paths:
       responses:
         '200':
           description: OK
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2

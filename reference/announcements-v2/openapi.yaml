@@ -17,6 +17,8 @@ paths:
       summary: "Get a user's announcements"
       tags: []
       responses: {}
+      security:
+        - OAuth2: []
     patch:
       summary: Updated part of an announcement
       tags: []
@@ -131,3 +133,9 @@ paths:
                     - audio_url: '<URL to a wav file recorded in the app>'
                       language: English
       parameters: []
+      security:
+        - OAuth2: []
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
