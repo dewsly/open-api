@@ -109,4 +109,25 @@ paths:
                       - referring_to_user_id
                       - target_group_type
                       - referring_to_user_type
+              required:
+                - announcement_type
+                - source
+            examples:
+              Attendance trigger:
+                value:
+                  content_template: '{first_name} was absent today.'
+                  announcement_type: attendance
+                  include_author_name: 'false'
+                  source: aeries
+                  merge_variables:
+                    - target_group: '0'
+                      target_group_type: school
+                      from_group: '100'
+                      from_group_type: school
+                      referring_to_user_id: '400'
+                      referring_to_user_type: student
+                      first_name: Travis
+                  recordings:
+                    - audio_url: '<URL to a wav file recorded in the app>'
+                      language: English
       parameters: []
