@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: SIS/Signal Kit Integration
+  version: '1.0'
+  contact:
+    name: Tom Zagorski
+    url: signalkit.com
+servers:
+  - url: 'https://app.signalkit.com/api/sis/v1'
+paths:
+  /csv-import/:
+    post:
+      summary: Import CSV Data
+      responses:
+        '200':
+          description: OK
+      description: ''
+  /perform-sync:
+    post:
+      summary: Request a sync
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: ''
+          refreshUrl: ''
+          scopes: []
