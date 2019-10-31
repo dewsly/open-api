@@ -1,4 +1,4 @@
- # Getting started
+ # Getting Started
 
 The Signal Kit API provides school districts with the ability to communicate with their population. Before getting started, here are a few basic guidelines that apply to this collection of API endpoints.
 
