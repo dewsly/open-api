@@ -14,8 +14,8 @@
       "post": {
         "summary": "Upload SIS files",
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           }
         },
         "security": [
@@ -25,10 +25,35 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
                 "type": "object",
-                "properties": {}
+                "properties": {
+                  "schools": {
+                    "type": "string"
+                  },
+                  "classes": {
+                    "type": "string"
+                  },
+                  "groups": {
+                    "type": "string"
+                  },
+                  "staff": {
+                    "type": "string"
+                  },
+                  "students": {
+                    "type": "string"
+                  },
+                  "contacts": {
+                    "type": "string"
+                  },
+                  "memberships": {
+                    "type": "string"
+                  },
+                  "admins": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
