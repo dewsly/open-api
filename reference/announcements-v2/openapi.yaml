@@ -120,6 +120,17 @@ paths:
                   type: string
                 job_name:
                   type: string
+                content_templates:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      delivery_method:
+                        type: string
+                      language:
+                        type: string
+                      content:
+                        type: string
               required:
                 - announcement_type
                 - source

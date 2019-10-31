@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: Users
+  version: '1.0'
+servers:
+  - url: 'https://app.signalkit.com/api/users/v1'
+paths:
+  '/users/{id}/':
+    parameters:
+      - type: string
+        name: id
+        in: path
+        schema:
+          type: integer
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      security:
+        - OAuth2: []
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: source
+components:
+  schemas: {}
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: ''
+          refreshUrl: ''
+          scopes: []
