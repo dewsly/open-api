@@ -1,3 +1,23 @@
 # Importing SIS CSV Files
 
-The beginning of an awesome article...
+## Schools
+
+Field Name | Example Values 
+---------|----------
+ ID | PCHS 
+ Name | Pacific Crest High School 
+ 
+## Classes
+
+## Groups
+
+## Staff
+
+## Students
+
+## Contacts
+
+## Memberships
+
+## Admins
+
