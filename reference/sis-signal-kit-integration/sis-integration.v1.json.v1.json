@@ -1,13 +1,49 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "sis-integration.v1.json",
+    "title": "SIS Integration",
     "version": "1.0"
   },
   "servers": [
     {
-      "url": "http://localhost:3000"
+      "url": "https://app.signalkit.com/api/sis/v1"
     }
   ],
-  "paths": {}
+  "paths": {
+    "/csv-import": {
+      "post": {
+        "summary": "Upload SIS files",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/sync": {
+      "parameters": [],
+      "post": {
+        "summary": "Request a sync",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "OAuth2": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "",
+            "refreshUrl": "",
+            "scopes": []
+          }
+        }
+      }
+    }
+  }
 }
