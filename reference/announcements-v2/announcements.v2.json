@@ -91,8 +91,41 @@
       "post": {
         "summary": "Create many announcements at once",
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "success_count": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "206": {
+            "description": "Partial Content (some rows skipped)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "success_count": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           },
           "": {
             "description": "",
