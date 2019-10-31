@@ -21,7 +21,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../common/models/user.v1.yaml
+                type: object
+                properties:
+                  id:
+                    type: number
       security:
         - OAuth2: []
       parameters:
