@@ -21,7 +21,7 @@ paths:
       security:
         - OAuth2: []
     patch:
-      summary: Updated part of an announcement
+      summary: Update part of an announcement
       tags: []
       responses: {}
     put:
