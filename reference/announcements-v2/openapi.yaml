@@ -72,6 +72,8 @@ paths:
                   type: string
                 phone_content_template:
                   type: string
+                feed_content_template:
+                  type: string
                 merge_variables:
                   type:
                     - string
@@ -118,8 +120,6 @@ paths:
                   type: string
                 job_name:
                   type: string
-                '':
-                  type: string
               required:
                 - announcement_type
                 - source
@@ -148,3 +148,8 @@ components:
   securitySchemes:
     OAuth2:
       type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: ''
+          refreshUrl: ''
+          scopes: []

@@ -41,3 +41,7 @@ components:
   securitySchemes:
     OAuth2:
       type: oauth2
+      flows:
+        clientCredentials:
+          refreshUrl: ''
+          scopes: []
