@@ -13,9 +13,15 @@ paths:
         schema:
           type: integer
     get:
-      summary: Your GET endpoint
+      summary: Get users
       tags: []
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../common/models/user.v1.yaml
       security:
         - OAuth2: []
       parameters:
@@ -23,6 +29,7 @@ paths:
             type: string
           in: query
           name: source
+      requestBody: {}
 components:
   schemas: {}
   securitySchemes:
