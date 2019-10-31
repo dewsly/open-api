@@ -22,7 +22,17 @@
           {
             "OAuth2": []
           }
-        ]
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
       },
       "get": {
         "summary": "Get announcements",
@@ -85,7 +95,15 @@
             "description": "OK"
           },
           "": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
           }
         },
         "security": [

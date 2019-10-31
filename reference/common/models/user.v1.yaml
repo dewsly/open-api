@@ -1,5 +1,0 @@
-title: User
-type: object
-properties:
-  id:
-    type: string

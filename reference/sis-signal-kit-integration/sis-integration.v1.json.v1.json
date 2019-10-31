@@ -17,6 +17,21 @@
           "200": {
             "description": "OK"
           }
+        },
+        "security": [
+          {
+            "OAuth2": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
         }
       }
     },

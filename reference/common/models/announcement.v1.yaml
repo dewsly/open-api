@@ -1,5 +1,0 @@
-title: Announcement
-type: object
-properties:
-  id:
-    type: string
