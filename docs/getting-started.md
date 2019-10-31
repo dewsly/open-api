@@ -15,7 +15,7 @@ curl -X POST -d "grant_type=client_credentials" -u "<key>:<secret>" https://app.
 Sending the request above, you should get a response similar to:
 
 ```bash
-{"access_token": "6TufJ3HA9IaKDFk1aBlsiCgL6WHry2", "scope": "read delete write", "token_type": "Bearer", "expires_in": 36000}%
+{"access_token": "6TufJ3HA9IaKDFk1aBlsiCgL6WHry2", "scope": "read delete write", "token_type": "Bearer", "expires_in": 36000}
 ```
 
 Once you have this Bearer access_token, you just need to add an Authorization header to your API requests. For example:
