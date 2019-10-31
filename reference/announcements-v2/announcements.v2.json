@@ -2,12 +2,251 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Announcements V2",
-    "version": "1.0"
+    "version": "2.0"
   },
   "servers": [
     {
-      "url": "http://localhost:3000"
+      "url": "https://app.signalkit.com/api/announcements/v2"
     }
   ],
-  "paths": {}
+  "paths": {
+    "/announcements/": {
+      "post": {
+        "summary": "Create an announcement",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "Get announcements",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update an announcement",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": []
+          }
+        ]
+      },
+      "patch": {
+        "summary": "Update part of an announcement",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete an announcement",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": []
+          }
+        ]
+      }
+    },
+    "/bulk-import/": {
+      "post": {
+        "summary": "Create many announcements at once",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "OAuth2": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "announcement_type": {
+                    "type": "string"
+                  },
+                  "include_author_name": {
+                    "type": "boolean"
+                  },
+                  "source": {
+                    "type": "string"
+                  },
+                  "content_template": {
+                    "type": "string"
+                  },
+                  "email_content_template": {
+                    "type": "string"
+                  },
+                  "email_subject": {
+                    "type": "string"
+                  },
+                  "sms_content_template": {
+                    "type": "string"
+                  },
+                  "phone_content_template": {
+                    "type": "string"
+                  },
+                  "feed_content_template": {
+                    "type": "string"
+                  },
+                  "recordings": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "audio_url": {
+                          "type": "string"
+                        },
+                        "language": {
+                          "type": "string",
+                          "description": "Language Name. For example, \"English\" or \"Spanish\"."
+                        }
+                      },
+                      "required": [
+                        "audio_url",
+                        "language"
+                      ]
+                    }
+                  },
+                  "merge_variables": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "from_group": {
+                          "type": "string"
+                        },
+                        "target_group": {
+                          "type": "string"
+                        },
+                        "user_ids": {
+                          "type": "string"
+                        },
+                        "referring_to_user_id": {
+                          "type": "string"
+                        },
+                        "send_at": {
+                          "type": "string"
+                        },
+                        "target_group_type": {
+                          "type": "string",
+                          "enum": [
+                            "school",
+                            "class",
+                            "group"
+                          ],
+                          "example": "school"
+                        },
+                        "referring_to_user_type": {
+                          "type": "string",
+                          "enum": [
+                            "staff",
+                            "student",
+                            "contact"
+                          ],
+                          "example": "student"
+                        },
+                        "from_group_type": {
+                          "type": "string"
+                        },
+                        "user_type": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "target_group",
+                        "referring_to_user_id",
+                        "target_group_type",
+                        "referring_to_user_type"
+                      ]
+                    }
+                  },
+                  "reply_to_email": {
+                    "type": "string"
+                  },
+                  "job_complete_email": {
+                    "type": "string"
+                  },
+                  "job_name": {
+                    "type": "string"
+                  },
+                  "content_templates": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "delivery_method": {
+                          "type": "string"
+                        },
+                        "language": {
+                          "type": "string"
+                        },
+                        "content": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "announcement_type"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "OAuth2": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "",
+            "refreshUrl": "",
+            "scopes": []
+          }
+        }
+      }
+    }
+  }
 }
