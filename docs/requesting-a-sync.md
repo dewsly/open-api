@@ -1,3 +1,0 @@
-# Requesting A Sync
-
-The beginning of an awesome article...

@@ -1,3 +1,0 @@
-# Triggered Announcements
-
-The beginning of an awesome article...
